@@ -113,12 +113,9 @@
     align-items: center;
     justify-content: flex-end;
   }
-  header nav .toggle-menu {
-    color: white;
-    font-size: 22px;
-  }
+  
   @media (min-width: 768px) {
-    header nav .toggle-menu {
+    {
       display: none;
     }
   }
@@ -129,7 +126,7 @@
     header nav ul {
       display: none;
     }
-    header nav .toggle-menu:hover + ul {
+    header nav  ul {
       display: flex;
       flex-direction: column;
       position: absolute;
@@ -233,8 +230,8 @@
   }
   
   /* End Landing */
-  /* Start Services  */
-/* Start Portfolio */
+  
+/* Start company */
 .special-heading
 {
   padding-top: 10px;
@@ -421,8 +418,7 @@ border: 1px solid #777;
     font-size: 18px;
   }
   
-  /* Add a green text color and a checkmark when the requirements are right */
-  .valid {
+  
     color: green;
   }
   
@@ -432,7 +428,6 @@ border: 1px solid #777;
     content: "✔";
   }
   
-  /* Add a red text color and an "x" when the requirements are wrong */
   .invalid {
     color: red;
   }
