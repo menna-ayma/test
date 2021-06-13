@@ -148,32 +148,22 @@
         
       </div>
       <div class="content">
-        <form action="index.html" id="form" onsubmit ="alert('thank you');">
+        <form action="" id="form" onsubmit ="return validate()"">
           <label for="fname">First Name</label>
           <input class="main-input" type="text" name="name" placeholder="Your Name" id="fname" required/>
           <label for="lname">Last Name</label>
           <input class="main-input" type="text" name="lname" placeholder="Your Name" id="lname" required/>
           <label for="mail">Your Email</label>
           <input class="main-input" type="email" name="mail" placeholder="Your Email" id="mail" required />
-          <label for="psw" >password</label>
-          <input  class="main-input" type="password" id="psw" name="password" placeholder="password" required>
-          <div id="message">
-            <h3>Password must contain the following:</h3>
-            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-            <p id="number" class="invalid">A <b>number</b></p>
-            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-            <p id="special" class="invalid">include <b>special character</b></p>
-            <p id="space" class="invalid">not include <b> a space</b></p>
-            
-          </div>
-          <br>
+          <label for="pass" >password</label>
+          <input  class="main-input" type="password" id="pass" name="password" placeholder="password" required>
+          
           <label for="gener"> gender</label>
           <select id="gener" name="gender"  class="main-input">
             <option value="male">male </option>
             <option value="female"> female</option>
             <label for="number">Phone Number</label>
-            <input class="main-input" type="text" id="number" name="phone Number" placeholder="Enter Your Phone Number" minlength="11" maxlength="11"   required> 
+           <input type="tel" id="phone" name="phone" placeholder="01202753291" pattern="[0]{1}[1]{1}[0-9]{9}" required>
             <label for="add">Address</label>
             <textarea class="main-input" name="message" placeholder="Your Address " rows="20px" cols="10px" required></textarea>
           <input type="submit" value="submit"  name="submit" style="background-color: aqua; padding: 25px;"  >
@@ -186,89 +176,34 @@
   </div>
   <!-- End sign in -->
   <!--java-->
-  <script>
-    var myInput = document.getElementById("psw");
-    var letter = document.getElementById("letter");
-    var capital = document.getElementById("capital");
-    var number = document.getElementById("number");
-    var length = document.getElementById("length");
-    var special = document.getElementById("special");
-    var space= document.getElementById("space");
-    
-    myInput.onfocus = function() {
-      document.getElementById("message").style.display = "block";
-    }
-    
-    myInput.onblur = function() {
-      document.getElementById("message").style.display = "none";
-    }
-    
-    
-    myInput.onkeyup = function() {
-      
-      var lowerCaseLetters = /[a-z]/g;
-      if(myInput.value.match(lowerCaseLetters)) {  
-        letter.classList.remove("invalid");
-        letter.classList.add("valid");
-      } else {
-        letter.classList.remove("valid");
-        letter.classList.add("invalid");
-      }
-      
-      
-      var upperCaseLetters = /[A-Z]/g;
-      if(myInput.value.match(upperCaseLetters)) {  
-        capital.classList.remove("invalid");
-        capital.classList.add("valid");
-      } else {
-        capital.classList.remove("valid");
-        capital.classList.add("invalid");
-      }
-    
-     
-      var numbers = /[0-9]/g;
-      if(myInput.value.match(numbers)) {  
-        number.classList.remove("invalid");
-        number.classList.add("valid");
-      } else {
-        number.classList.remove("valid");
-        number.classList.add("invalid");
-      }
-      
-      
-      if(myInput.value.length == 8 ) {
-        length.classList.remove("invalid");
-        length.classList.add("valid");
-      } else {
-        length.classList.remove("valid");
-        length.classList.add("invalid");
-      }
-
-      
-      if(myInput.value.search(/[]/)==-1) {
-        
-        space.classList.add("valid");
-        space.classList.remove("invalid");
-      } else {
-        
-        space.classList.remove("invalid");
-        space.classList.add("valid");
-      }
-      
-      if(myInput.value.search(/[!\@\#\$\%\*\_]/)!=-1) {
-        
-        
-        special.classList.remove("invalid");
-        special.classList.add("valid");
-    
-      } else {
-        special.classList.remove("valid");
-        special.classList.add("invalid");
-      }
-    }
-    
-     
-    </script>
+   <script>
+            function validate(){
+                     var contactForm = document.getElementById("form");
+                       var check = true;
+                       var password = document.getElementById("pass").value;
+                       var phone = document.getElementById("phone").value;
+                       var x=1;
+                         if(password == "")
+                        {   alert('Password is required !');
+                        x++;
+                        check= false;  }    
+                           if (!password.match(/^[A-Z](?=.*[^@#!])(?=.*[^a-zA-Z0-9])(?!.*\s).{7}$/))
+                           {   alert("Password is Not Valid, It must contain 8 characters: start with uppercase then there must be one lowercase, one number and one special character (@,#,!) at least");   
+                           check=false; 
+                          x++ }
+                              if (!phone.match(/^[0][1][0-9]{9}$/))
+                           {   alert("Phone is not valid");
+                              check=false; 
+                            x++ }
+                              if(x>1){
+                                return alert("try again");
+                              }
+                           if (x==1){
+                             return alert('thanks');
+                             
+                           }
+            }
+        </script>
  <!--end java-->
   </body>
 </html>
