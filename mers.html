@@ -5,10 +5,8 @@
 
 
  body {
-    background-image: url(789.jpg);
-    background-size: cover;
-    margin:0;
-    background-repeat: no-repeat;}
+   background-color: rgba(0, 0, 0, 0.363);
+    margin:0;}
 
  
 div.gallery {
@@ -52,19 +50,29 @@ width: 24.99999%;
   float: right;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
 .responsive {
-width: 49.99999%;
-margin: 6px 0;
+  width: 49.99999%; 
+margin: 6px 0;}
+div.gallery img {
+ /* width:364.5px ;
+   height:250px ;*/
+   width:335.2px ;
+    height:250px ;
 }
+
 
 
 @media only screen and (max-width: 500px) {
 .responsive {
 width: 100%;
 }
+div.gallery img{
+width:470px ;
+height:250px ;
+}
 
-
+}
 
 .clearfix:after {
 content: "";
@@ -83,7 +91,7 @@ clear: both;
  <div class="responsive">
     <div class="gallery">
       <a target="_blank" href=".mer1.jpg">
-        <img src="mer1.jpg" alt="Mercedes" width="600" height="400">
+        <img src="mer1.jpg" alt="Mercedes" >
       </a>
       <div class="desc" style="background-color: rgba(0, 0, 0, 0.651); color: blanchedalmond;">Mercedes-AMG GT 43<br> 
       price:2,790,000 EGP
@@ -93,7 +101,7 @@ clear: both;
   <div class="responsive">
     <div class="gallery">
       <a target="_blank" href="mer2.jpg">
-        <img src="mer2.jpg" alt="Mercedes" width="600" height="400">
+        <img src="mer2.jpg" alt="Mercedes" >
       </a>
       <div class="desc"style="background-color: rgba(0, 0, 0, 0.651); color: blanchedalmond;" >
          Mercedes AMG A35<br>  
@@ -108,7 +116,7 @@ clear: both;
  <div class="responsive">
    <div class="gallery">
      <a target="_blank" href="mer3.jpeg">
-       <img src="mer3.jpeg" alt="Mercedes" width="600" height="400">
+       <img src="mer3.jpeg" alt="Mercedes" >
      </a>
      <div class="desc"style="background-color:rgba(0, 0, 0, 0.651); color: blanchedalmond;">Mercedes S320 <br> 
       price:2,250,000 EGP
@@ -119,7 +127,7 @@ clear: both;
  <div class="responsive">
    <div class="gallery">
      <a target="_blank" href="mer4.jpg">
-       <img src="mer4.jpg" alt="Mercedes" width="600" height="400">
+       <img src="mer4.jpg" alt="Mercedes" >
      </a>
      <div class="desc" style="background-color: rgba(0, 0, 0, 0.651); color: blanchedalmond;">Mercedes AMG GT53<br>
       price:3,530,000 EGP  </div>
@@ -129,7 +137,7 @@ clear: both;
  <div class="responsive">
    <div class="gallery">
      <a target="_blank" href="sl2.jpg">
-       <img src="sl2.jpg" alt="Mercedes" width="600" height="400">
+       <img src="sl2.jpg" alt="Mercedes" >
      </a>
      <div class="desc" style="background-color: rgba(0, 0, 0, 0.651); color: blanchedalmond;">Mercedes "sl"<br>
       price:1,013,700 EGP  </div>
@@ -138,7 +146,7 @@ clear: both;
  <div class="responsive">
    <div class="gallery">
      <a target="_blank" href="clas.jpg">
-       <img src="clas.jpg" alt="Mercedes" width="600" height="400">
+       <img src="clas.jpg" alt="Mercedes" >
      </a>
      <div class="desc" style="background-color: rgba(0, 0, 0, 0.651); color: blanchedalmond;">Mercedes "GLA"<br>
       price:880,000 EGP </div>
@@ -147,7 +155,7 @@ clear: both;
  <div class="responsive">
    <div class="gallery">
      <a target="_blank" href="g.jpg">
-       <img src="g.jpg" alt="Mercedes" width="600" height="400">
+       <img src="g.jpg" alt="Mercedes">
      </a>
      <div class="desc" style="background-color: rgba(0, 0, 0, 0.651); color: blanchedalmond;">Mercedes' G-class<br>
       price: 3.400.000  EGP    </div>
@@ -156,7 +164,7 @@ clear: both;
  <div class="responsive">
    <div class="gallery">
      <a target="_blank" href="cll.jpg">
-       <img src="cll.jpg" alt="Mercedes" width="600" height="400">
+       <img src="cll.jpg" alt="Mercedes" >
      </a>
      <div class="desc" style="background-color: rgba(0, 0, 0, 0.651); color: blanchedalmond;">Mercedes "CLS"<br>
       price:1,950,000 EGP  </div>
