@@ -173,8 +173,7 @@
   }
   .landing {
     min-height: 100vh;
-    background-color: #272423;
-    background-image: url("789.jpg");
+    
     background-size: cover;
     position: relative;
   }.landing .mySlides {display: none;}
