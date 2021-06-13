@@ -57,7 +57,7 @@
     left: 50%;
     transform: translateX(-50%);
     height: 2px;
-    background-color: rgb(30, 32, 30);
+    
     bottom: -30px;
     width: 120px;
   }
